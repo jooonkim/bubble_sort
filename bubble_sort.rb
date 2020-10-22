@@ -1,20 +1,13 @@
 def bubble_sort(arr)
-    for i in 0..(arr.length-1)
-        for j in i..(arr.length-1)
-            if arr[i] < arr[j]
-                next
-            elsif arr[i] = arr[j]
-                next
-            else
-                temp = arr[i]
-                arr[i] = arr[j]
-                arr[j] = temp
-            end
+    for i in 0..(arr.length-2)
+        if arr[i] > arr[i+1]
+            temp = arr[i]
+            arr[i] = arr[i+1]
+            arr[i+1] = temp
         end
     end
-
+    
     return "#{arr}"
 end
 
 puts bubble_sort([4,3,78,2,0,2])
-
